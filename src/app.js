@@ -9,6 +9,22 @@ class App extends React.Component {
   constructor(){
     super();
     this.state = { counter: 0 };
+
+    this.increment = this.increment.bind(this);
+    this.decrement = this.decrement.bind(this);
+    this.reset = this.reset.bind(this);
+  }
+
+  increment() {
+    this.setState(prevState => ({ counter: prevState.counter + 1 }));
+  }
+
+  decrement() {
+    this.setState(prevState => ({ counter: prevState.counter - 1 }));
+  }
+
+  reset() {
+    this.setState({ counter: 0 });
   }
 
   render() {
