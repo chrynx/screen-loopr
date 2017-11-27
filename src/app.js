@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+//--------------components----------------
+import MainBoard from './components/board/MainBoard';
+
 
 class App extends React.Component {
 
   render() {
     return (
-      <h1>WDI Project 4: MERN Stack App</h1>
+      <MainBoard />
     );
   }
 }
