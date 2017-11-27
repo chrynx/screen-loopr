@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+.main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #aaa;
+}
+.board {
+  display: flex;
+}
+.buttons {
+  border: 2px solid black;
+  display: flex;
+  height: 50px;
+  width: 245px;
+}
+button {
+  width: 25%;
+  padding: 0;
+  margin: 0;
+  background: white;
+  border-radius: 0;
+}
+button:hover {
+  background:grey;
+}
+.firstPad, .secondPad, .thirdPad, .fourthPad {
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  opacity: 0.7;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.firstPad {
+  background: blue;
+}
+.secondPad {
+  background: green;
+}
+.thirdPad {
+  background: red;
+}
+.fourthPad {
+  background: yellow;
+}
+.firstPad:hover, .secondPad:hover, .thirdPad:hover, .fourthPad:hover {
+  opacity: 1;
+}
