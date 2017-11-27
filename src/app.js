@@ -4,17 +4,9 @@ import Buttons from './components/Buttons.js';
 import MainBoard from './components/board/MainBoard';
 
 class App extends React.Component {
-
-
-  constructor(){
-    super();
-    this.state = { counter: 0 };
-
-    this.increment = this.increment.bind(this);
-    this.decrement = this.decrement.bind(this);
-    this.reset = this.reset.bind(this);
+  state = {
+    counter: 0
   }
-
   increment() {
     this.setState(prevState => ({ counter: prevState.counter + 1 }));
   }
@@ -25,8 +17,8 @@ class App extends React.Component {
 
   reset() {
     this.setState({ counter: 0 });
-  }
 
+  }
   render() {
 
     return (
