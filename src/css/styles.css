@@ -37,7 +37,7 @@ button {
 button:hover {
   background:grey;
 }
-.firstPad, .secondPad, .thirdPad, .fourthPad {
+.firstPad, .secondPad, .thirdPad, .fourthPad, .fifthPad, .sixthPad {
   height: 100px;
   width: 100px;
   margin: 10px;
@@ -46,6 +46,25 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.recording {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: red;
+  animation: none;
+  align-self: center;
+  margin: 10px;
+}
+.live {
+  background: green;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.5);}
+  100% {transform: scale(1);}
 }
 .firstPad {
   background: blue;
@@ -58,6 +77,12 @@ button:hover {
 }
 .fourthPad {
   background: yellow;
+}
+.fifthPad {
+  background: brown;
+}
+.sixthPad {
+  background: purple;
 }
 .firstPad:hover, .secondPad:hover, .thirdPad:hover, .fourthPad:hover {
   opacity: 1;
