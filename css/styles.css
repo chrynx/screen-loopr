@@ -25,6 +25,14 @@ button {
   margin: 0;
   background: white;
   border-radius: 0;
+  outline: none;
+}
+.inactiveButton {
+  background: white;
+}
+.activeButton {
+  background: rgb(200,200,200);
+  border: 2px solid black;
 }
 button:hover {
   background:grey;
