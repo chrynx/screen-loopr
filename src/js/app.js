@@ -44,20 +44,20 @@ $(()=> {
     $(e.target).toggleClass('activeButton');
   });
 
+  const numberOne = 49;
+  const numberTwo = 50;
+  const numberThree = 51;
+  const numberFour = 52;
+
   $firstPad.on('click', () => {
-    console.log(loopActive);
-    console.log(loopArr);
-    console.log('clicked the first pad');
     if(loopActive) loopArr.push('<audio autoplay><source src="sounds/clay.mp3"></audio>');
     $firstPad.html('<audio autoplay><source src="sounds/clay.mp3"></audio>');
   });
   $secondPad.on('click', () => {
-    console.log('clicked the second pad');
     if(loopActive) loopArr.push('<audio autoplay><source src="sounds/moon.mp3"></audio>');
     $secondPad.html('<audio autoplay><source src="sounds/moon.mp3"></audio>');
   });
   $thirdPad.on('click', () => {
-    console.log('clicked the third pad');
     if(loopActive) loopArr.push('<audio autoplay><source src="sounds/strike.mp3"></audio>');
     $thirdPad.html('<audio autoplay><source src="sounds/strike.mp3"></audio>');
   });
@@ -71,4 +71,27 @@ $(()=> {
     if(loopActive) loopArr.push('<audio autoplay><source src=""></audio>');
     $fourthPad.html('<audio autoplay><source src=""></audio>');
   });
+
+
+  // KEYPRESS EVENTS
+  $(document).keypress((e) => {
+    console.log(e.originalEvent.charCode);
+    if(e.originalEvent.charCode === numberOne){
+      if(loopActive) loopArr.push('<audio autoplay><source src="sounds/clay.mp3"></audio>');
+      $firstPad.html('<audio autoplay><source src="sounds/clay.mp3"></audio>');
+    }
+    if(e.originalEvent.charCode === numberTwo){
+      if(loopActive) loopArr.push('<audio autoplay><source src="sounds/moon.mp3"></audio>');
+      $secondPad.html('<audio autoplay><source src="sounds/moon.mp3"></audio>');
+    }
+    if(e.originalEvent.charCode === numberThree){
+      if(loopActive) loopArr.push('<audio autoplay><source src="sounds/strike.mp3"></audio>');
+      $thirdPad.html('<audio autoplay><source src="sounds/strike.mp3"></audio>');
+    }
+    if(e.originalEvent.charCode === numberFour){
+      if(loopActive) loopArr.push('<audio autoplay><source src="sounds/wipe.mp3"></audio>');
+      $fourthPad.html('<audio autoplay><source src="sounds/wipe.mp3"></audio>');
+    }
+  });
+
 });
